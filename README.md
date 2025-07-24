@@ -17,7 +17,7 @@ Here are some ideas to get you started:
 <img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=150&section=header&text=calla1102's%20GitHub&fontSize=60" />
 
 <div align=center>
-<h3>반갑습니다! 김민주입니다 <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Grinning%20Squinting%20Face.png" alt="Grinning Squinting Face" width="25" height="25" />
+<h3>반갑습니다! 김민주입니다 <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Grinning%20Cat%20with%20Smiling%20Eyes.png" alt="Grinning Cat with Smiling Eyes" width="25" height="25" />
 </h3>
 
 📚 Languages / Library / Tools 📚
@@ -44,7 +44,9 @@ Here are some ideas to get you started:
 
 
 **Contact & More**
-- 📧 Email: calla20031@naver.com
-- 💼 [포트폴리오 레포지토리](https://fuchsia-belief-040.notion.site/16209a0b0e3e8020b57ec165fa5fbab2)
-- 🔍 관심 분야: 게임 개발 · 프론트엔드 · 서버 · AI · 피그마
+<ul>
+  <p>📧 <strong>Email:</strong> calla20031@naver.com</p>
+  <p>💼 <strong><a href="https://fuchsia-belief-040.notion.site/16209a0b0e3e8020b57ec165fa5fbab2" target="_blank">포트폴리오 레포지토리</a></strong></p>
+  <p>🔍 <strong>관심 분야:</strong> 게임 개발 · 프론트엔드 · 서버 · AI · 피그마</p>
+</ul>
 </div>
