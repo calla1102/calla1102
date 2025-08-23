@@ -46,7 +46,7 @@ Here are some ideas to get you started:
 **Contact & More**
 <ul>
   <p>📧 <strong>Email:</strong> calla20031@naver.com</p>
-  <p>💼 <strong><a href="https://fuchsia-belief-040.notion.site/16209a0b0e3e8020b57ec165fa5fbab2" target="_blank">포트폴리오 레포지토리</a></strong></p>
+  <!--<p>💼 <strong><a href="https://fuchsia-belief-040.notion.site/16209a0b0e3e8020b57ec165fa5fbab2" target="_blank">포트폴리오 레포지토리</a></strong></p>-->
   <p>🔍 <strong>관심 분야:</strong> 프론트엔드 · 서버 · AI · 피그마</p>
 </ul>
 </div>
