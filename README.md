@@ -39,9 +39,9 @@ Here are some ideas to get you started:
 |------------|------|------|
 | **0끌** | 커뮤니티 기반 게이미피케이션 지출관리 app | 🔗 [GitHub](https://github.com/calla1102/yeongkkuel-android.git) |
 | **숲결** | 일상 속 탄소 소비를 기록하고 시각화 하는 친환경 습관 형성 app |🔗 [GitHub](https://github.com/calla1102/Frontend.git)  |
-| **투첵** | 날짜별 일정과 한 줄 일기를 기록할 수 있는 일정 관리 app |🔗 [GitHub](https://github.com/calla1102/Backend.git)  |
-| **K-PaaS** | k-paas 공모전 준비 중... | 🚧 개발 중 |
-
+| **투첵** | 날짜별 일정과 한 줄 일기를 기록할 수 있는 일정 관리 app | 🔗 [GitHub](https://github.com/calla1102/Backend.git)  |
+| **파이낸스닥** | 청년들을 위한 AI 기반 재무 관리 및 금융 상품 추천 app | 🔗 [GitHub](https://github.com/Finance-doc/Frontend.git) |
+| **K-PaaS** | 해몽 앱 개발 중... | 🚧 [개발 중] |
 
 **Contact & More**
 <ul>
