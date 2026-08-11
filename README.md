@@ -111,11 +111,47 @@ Spring Boot 기반 MSA에서 결제와 동시성 문제를 다룹니다.
 
 ## 이전 프로젝트
 
-| 프로젝트 | 설명 | 역할 | 링크 |
-|---|---|---|---|
-| **0끌** | 커뮤니티 기반 게이미피케이션 지출 관리 앱 | Android (Kotlin) | [GitHub](https://github.com/calla1102/yeongkkuel-android) |
-| **숲결** | 일상 속 탄소 소비를 기록·시각화하는 친환경 습관 앱 | Frontend (TypeScript) | [GitHub](https://github.com/calla1102/Frontend) |
-| **파이낸스닥** | 청년 대상 AI 재무 관리·금융 상품 추천 앱 | Frontend (TypeScript) | [GitHub](https://github.com/Finance-doc/Frontend) |
+### 💸 0끌 — 커뮤니티 기반 게이미피케이션 지출 관리 앱
+
+`팀 프로젝트 (5인)` &nbsp;|&nbsp; **Kotlin 2.0 · Android · Spring**
+
+"어떻게 하면 좀 더 재미있게 돈을 절약할 수 있을까?"에서 출발한 무지출 챌린지 앱입니다.
+절약에 성공하면 리워드를 받아 캐릭터를 꾸미고, 챌린저들과 절약 점수 랭킹으로 경쟁합니다.
+
+- **상점 · 리워드 획득** 기능을 담당해 절약 성공 → 리워드 지급 → 캐릭터 꾸미기로 이어지는 보상 루프를 구현
+- 안드로이드 네이티브(Kotlin) 환경에서 팀 5인과 도메인을 나눠 개발
+
+🔗 [yeongkkeul/yeongkkuel-android](https://github.com/calla1102/yeongkkuel-android)
+
+<br />
+
+### 🌿 숲결 — 친환경 습관 형성 앱
+
+`구름톤 서북지구 · B4AFTER 팀` &nbsp;|&nbsp; **React Native · Expo · TypeScript**
+
+일상 속 친환경 실천을 기록하면 나무가 자라는 습관 형성 앱입니다.
+**팀에서 유일한 프론트엔드**로 앱 전체 화면을 혼자 구현했습니다 (나머지 4명은 백엔드).
+
+- `씨앗 → 새싹 → 작은 나무 → 나무` 성장 단계 시각화와 캘린더 기반 실천 기록
+- 상점 · 인벤토리 · 리워드 게이미피케이션 구조, 소셜 로그인 연동
+- 백엔드 4명이 내려주는 API를 혼자 받아내야 해서, **Swagger·Notion 명세를 대조해 불일치를 찾아내고 백엔드와 직접 조율**
+- 응답이 불안정한 호출 구간은 헬퍼 함수로 모듈화해 오류 처리를 한곳으로 모음
+
+🔗 [숲결 Frontend](https://github.com/calla1102/Frontend)
+
+<br />
+
+### 📊 파이낸스닥 — 청년 대상 AI 재무 관리·금융 상품 추천 앱
+
+`개방형 클라우드 플랫폼(K-PaaS) 활용 공모전` &nbsp;|&nbsp; **React Native · Expo Router · TypeScript**
+
+청년의 재무 상태를 진단하고 맞춤 금융 상품과 금융 교육 콘텐츠를 추천하는 앱입니다.
+프론트엔드를 담당했으며, 백엔드는 K-PaaS 위에 올린 MSA(회원·리포트·추천·교육 서비스 + 상품 크롤러)로 구성됐습니다.
+
+- 여러 마이크로서비스로 분리된 API를 게이트웨이 경유로 연동
+- 재무 리포트·상품 추천 결과를 모바일 화면으로 시각화
+
+🔗 [Finance-doc/Frontend](https://github.com/Finance-doc/Frontend)
 
 ---
 
