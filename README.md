@@ -95,10 +95,14 @@ Spring Boot 기반 MSA에서 결제와 동시성 문제를 다룹니다.
 
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=calla1102&theme=dark&hide_border=true&background=00000000&date_format=Y/n/j&ring=1a936f&fire=1a936f&currStreakLabel=88d498" />
-  <img src="https://streak-stats.demolab.com/?user=calla1102&hide_border=true&background=00000000&date_format=Y/n/j&ring=1a936f&fire=1a936f&currStreakLabel=1a936f" width="100%" />
-</picture>
+![Merged PRs](https://img.shields.io/badge/Merged_PRs-330+-1a936f?style=for-the-badge&logo=github&logoColor=white&labelColor=24292f)
+![Code Reviews](https://img.shields.io/badge/Code_Reviews-100+-1a936f?style=for-the-badge&logo=gitbook&logoColor=white&labelColor=24292f)
+![Contributions](https://img.shields.io/badge/Contributions-1,000+-1a936f?style=for-the-badge&logo=git&logoColor=white&labelColor=24292f)
+
+**머지된 PR 330건 이상**, 팀원 PR **코드 리뷰 100건 이상**을 남겼습니다.<br />
+혼자 코드를 쓰는 것만큼 남의 코드를 읽고 리뷰하는 일도 해왔습니다.
+
+<br />
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=calla1102&theme=github-dark&hide_border=true&bg_color=00000000&color=88d498&line=1a936f&point=88d498&area=true&area_color=1a936f" />
