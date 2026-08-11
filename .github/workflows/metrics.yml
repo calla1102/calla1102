@@ -1,0 +1,54 @@
+name: GitHub Metrics
+
+on:
+  schedule:
+    # 매일 06:00 KST (= UTC 21:00)
+    - cron: "0 21 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  languages:
+    name: 언어 분포 생성
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: 실제 작성한 코드 기준 언어 분포
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.languages.svg
+          # private·org 레포를 읽기 위한 PAT (repo 스코프). 저장소 Secret 으로 등록한다.
+          token: ${{ secrets.METRICS_TOKEN }}
+          # 결과 SVG 커밋은 기본 토큰으로 처리해 PAT 사용 범위를 좁힌다
+          committer_token: ${{ secrets.GITHUB_TOKEN }}
+          user: calla1102
+          base: ""
+          config_timezone: Asia/Seoul
+
+          # ── 기본값이면 주력 레포가 통째로 누락되는 두 옵션 ──
+          # affiliations 기본값은 owner 라서 org 소유 레포(languageforest·TicketRush·OffmodePub)가 전부 빠진다
+          repositories_affiliations: owner, collaborator, organization_member
+          # commits_authoring 기본값은 .user.login 하나뿐. 예전 계정(calla20031) 커밋도 본인 것으로 인식시킨다
+          commits_authoring: calla1102, calla20031
+
+          # ── 언어 분포 ──
+          plugin_languages: yes
+          # indepth: 레포를 클론해 linguist-js 로 "내가 작성한 커밋 패치"만 분석한다.
+          # 레포 언어 비율이 아니라 실제 기여분이 반영되는 게 핵심.
+          plugin_languages_indepth: yes
+          plugin_languages_analysis_timeout: 45
+          plugin_languages_analysis_timeout_repositories: 15
+          plugin_languages_categories: programming
+          plugin_languages_sections: most-used
+          plugin_languages_limit: 8
+          plugin_languages_threshold: 1%
+          plugin_languages_ignored: shell, dockerfile, makefile, batchfile, procfile
+          # org 레포는 affiliations 만으로 누락될 수 있어 명시적으로 지정한다 (콤마 구분).
+          # 이전 프로젝트도 넣으려면 아래에 추가:
+          #   yeongkkeul/yeongkkuel-android, Finance-doc/Frontend, 9room-b4after/Frontend
+          plugin_languages_indepth_custom: >-
+            languageforest/languageforest-client,
+            TicketRush/TicketRush-backend,
+            OffmodePub/offmode
