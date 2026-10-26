@@ -40,15 +40,16 @@ Spring Boot 기반 MSA에서 결제와 동시성 문제를 다룹니다.
 
 ---
 
-## 진행 중인 프로젝트
+## 주요 프로젝트
 
 ### 🌳 영어의 숲 — AI 영어 일기 학습 앱
 
-`iOS · Android 출시 운영 중 (v1.6.1)` &nbsp;|&nbsp; **React Native · TypeScript · Expo Router · Zustand**
+`iOS · Android 출시 운영 중 · 입사 후 App Store 25개+ 버전` &nbsp;|&nbsp; **React Native · TypeScript · NestJS · MySQL**
 
 영어 일기를 쓰면 AI가 꼬리질문을 던지고, 거기서 뽑은 단어를 복습하게 하는 학습 앱입니다.
-클라이언트 개발을 맡아 기능 개발부터 스토어 출시·운영까지 담당하고 있습니다.
+2025년 12월 클라이언트 개발자로 합류해 앱을 맡았고, 2026년 8월부터는 NestJS 백엔드도 함께 개발합니다.
 
+- **앱 · 서버 양쪽 구현** — 롤플레이 · 복습 · 위젯 같은 기능을 앱과 서버에서 함께 구현 (앱 레포 PR 89% · 396/445, 2026.08 이후 BE 머지 PR 140건)
 - **구독 결제 · 페이월** — RevenueCat 기반 인앱 구독, 플랜 개편과 마일스톤 오퍼 설계, 배너 노출 실험
 - **그로스 계측** — Mixpanel · Firebase Analytics · AppsFlyer · Microsoft Clarity로 퍼널 이벤트를 설계하고, Sentry로 릴리스별 오류를 추적
 - **출시 운영** — iOS 심사 반려 대응(권한 문구 정비), 격주 배포 사이클, QA 회차 반영
@@ -58,12 +59,28 @@ Spring Boot 기반 MSA에서 결제와 동시성 문제를 다룹니다.
 
 <br />
 
+### ⌨️ 도각도각 — 기계식 키보드 소리가 나는 iPhone 키보드
+
+`App Store 출시 운영 중 · 1인 개발` &nbsp;|&nbsp; **Swift · UIKit · SwiftUI · SwiftPM · Kotlin**
+
+타건음을 골라 두면 어느 앱에서 타이핑해도 그 소리가 나는 키보드입니다.
+**기획 · 디자인 · 개발 · 마케팅을 혼자** 했습니다.
+
+- **5일 만에 출시** — 키보드 익스텐션으로 자판 전체를 직접 만들고, 한글 두벌식 오토마타를 SwiftPM 패키지로 구현
+- **출시 2주 만에 다운로드 1,000건** — 15초 광고 릴스와 피드를 직접 만들어 인스타그램(@ddogak_dogak) 운영
+- **피드백 반영** — DM · 댓글 · 앱 안 피드백 요청(소리 크기 · 키보드 높이 · 영문 자동 대문자)을 담아 출시 6일 만에 1.1.0, App Store 평점 4.4
+- **Android 베타** — 인스타 구글 폼으로 22명 신청 · 12명 설치, 제보를 받아 수정
+
+🔗 [App Store](https://apps.apple.com/kr/app/id6819567600)
+
+<br />
+
 ### 🎫 TicketRush — 대규모 트래픽 티켓 예매 플랫폼
 
-`진행 중` &nbsp;|&nbsp; **Java 21 · Spring Boot · Spring Cloud · Kafka · Redis · MySQL**
+`완료 · 2025.11 ~ 2026.09 · 팀장 · PM` &nbsp;|&nbsp; **Java 21 · Spring Boot · Spring Cloud · Kafka · Redis · MySQL**
 
 인기 공연 티켓 오픈처럼 짧은 시간에 트래픽이 몰리는 환경을 다루는 백엔드입니다.
-8개 서비스로 나눈 MSA 구조에서 **공연 · 결제 도메인과 CI, 디자인**을 맡았습니다.
+팀장 · PM으로 기능 명세 · 스프린트 · 화면 기획 · 발표를 맡았고, 8개 서비스로 나눈 MSA 구조에서 **공연 · 결제 도메인과 CI**를 개발했습니다.
 
 - **결제 정합성** — 결제 확정 시 예매 소유자를 대조해 *남의 예매에 결제가 귀속되던 결함*을 차단
 - **보상 트랜잭션** — 좌석 확정 실패 시 자동 환불되도록 Saga 보상 흐름을 구성해, 과금됐는데 좌석이 없는 상태를 제거
@@ -77,14 +94,14 @@ Spring Boot 기반 MSA에서 결제와 동시성 문제를 다룹니다.
 
 ### 📸 offmode — 오프라인 미션 습관 형성 앱
 
-`개인 프로젝트` &nbsp;|&nbsp; **React Native · Expo · Spring Boot · MySQL · AWS**
+`개인 프로젝트 · App Store 출시 이력 (현재 미게시)` &nbsp;|&nbsp; **React Native · Expo · Spring Boot · MySQL · AWS**
 
 매일 하나의 오프라인 미션을 사진으로 인증하는 소셜 챌린지 앱입니다.
 **앱 · 서버 · 인프라 · 디자인을 혼자 전부** 담당했습니다.
 
 - 방(Room) 기반 미션 구조와 멤버 간 상호 인증(피어 확인) 설계
 - Spring Boot + JPA 백엔드, Flyway 마이그레이션(H2/MySQL 이중 관리), JWT 인증
-- AWS EC2 + RDS + Nginx + Let's Encrypt HTTPS 직접 구축, 태그 기반 자동 배포
+- AWS EC2 + RDS + Nginx + Let's Encrypt HTTPS 직접 구축
 - EAS Build로 iOS 빌드·스토어 제출, 이미지 저장은 Cloudflare R2
 
 🔗 [OffmodePub/offmode](https://github.com/OffmodePub/offmode)
@@ -95,11 +112,11 @@ Spring Boot 기반 MSA에서 결제와 동시성 문제를 다룹니다.
 
 <div align="center">
 
-![Merged PRs](https://img.shields.io/badge/Merged_PRs-330+-1a936f?style=for-the-badge&logo=github&logoColor=white&labelColor=24292f)
+![Merged PRs](https://img.shields.io/badge/Merged_PRs-500+-1a936f?style=for-the-badge&logo=github&logoColor=white&labelColor=24292f)
 ![Code Reviews](https://img.shields.io/badge/Code_Reviews-100+-1a936f?style=for-the-badge&logo=gitbook&logoColor=white&labelColor=24292f)
 ![Contributions](https://img.shields.io/badge/Contributions-1,000+-1a936f?style=for-the-badge&logo=git&logoColor=white&labelColor=24292f)
 
-**머지된 PR 330건 이상**, 팀원 PR **코드 리뷰 100건 이상**을 남겼습니다.<br />
+2026년에만 **머지 PR 500건 이상**(영어의 숲 앱 367 · 서버 141), 팀원 PR **코드 리뷰 100건 이상**을 남겼습니다.<br />
 혼자 코드를 쓰는 것만큼 남의 코드를 읽고 리뷰하는 일도 해왔습니다.
 
 <br />
