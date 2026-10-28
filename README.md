@@ -53,7 +53,7 @@ Spring Boot 기반 MSA에서 결제와 동시성 문제를 다룹니다.
 - **구독 결제 · 페이월** — RevenueCat 기반 인앱 구독, 플랜 개편과 마일스톤 오퍼 설계, 배너 노출 실험
 - **그로스 계측** — Mixpanel · Firebase Analytics · AppsFlyer · Microsoft Clarity로 퍼널 이벤트를 설계하고, Sentry로 릴리스별 오류를 추적
 - **출시 운영** — iOS 심사 반려 대응(권한 문구 정비), 격주 배포 사이클, QA 회차 반영
-- **핵심 기능** — STT 기반 말하기 학습, 소셜 로그인(카카오·구글·애플), 공유 일기와 SNS 공유 카드
+- **핵심 기능** — STT 기반 말하기 학습, 카카오 로그인, 공유 일기와 SNS 공유 카드
 
 > 비공개 저장소라 코드는 공개되어 있지 않습니다. 상세 구현은 요청 시 설명드릴 수 있습니다.
 
@@ -97,10 +97,10 @@ Spring Boot 기반 MSA에서 결제와 동시성 문제를 다룹니다.
 `개인 프로젝트 · App Store 출시 이력 (현재 미게시)` &nbsp;|&nbsp; **React Native · Expo · Spring Boot · MySQL · AWS**
 
 매일 하나의 오프라인 미션을 사진으로 인증하는 소셜 챌린지 앱입니다.
-**앱 · 서버 · 인프라 · 디자인을 혼자 전부** 담당했습니다.
+**앱 · 서버 · 인프라 · 디자인을 직접** 담당했습니다.
 
 - 방(Room) 기반 미션 구조와 멤버 간 상호 인증(피어 확인) 설계
-- Spring Boot + JPA 백엔드, Flyway 마이그레이션(H2/MySQL 이중 관리), JWT 인증
+- Spring Boot + JPA 백엔드, JWT 인증
 - AWS EC2 + RDS + Nginx + Let's Encrypt HTTPS 직접 구축
 - EAS Build로 iOS 빌드·스토어 제출, 이미지 저장은 Cloudflare R2
 
@@ -113,11 +113,10 @@ Spring Boot 기반 MSA에서 결제와 동시성 문제를 다룹니다.
 <div align="center">
 
 ![Merged PRs](https://img.shields.io/badge/Merged_PRs-500+-1a936f?style=for-the-badge&logo=github&logoColor=white&labelColor=24292f)
-![Code Reviews](https://img.shields.io/badge/Code_Reviews-100+-1a936f?style=for-the-badge&logo=gitbook&logoColor=white&labelColor=24292f)
 ![Contributions](https://img.shields.io/badge/Contributions-1,000+-1a936f?style=for-the-badge&logo=git&logoColor=white&labelColor=24292f)
 
-2026년에만 **머지 PR 500건 이상**(영어의 숲 앱 367 · 서버 141), 팀원 PR **코드 리뷰 100건 이상**을 남겼습니다.<br />
-혼자 코드를 쓰는 것만큼 남의 코드를 읽고 리뷰하는 일도 해왔습니다.
+2026년에만 **머지 PR 500건 이상**(영어의 숲 앱 367 · 서버 141)을 남겼고, TicketRush에서는 팀원 PR 34건을 리뷰했습니다.<br />
+회사에서는 사람 리뷰어가 없어, 직접 만든 AI 리뷰 에이전트와 CI 게이트로 코드 리뷰를 대신했습니다.
 
 <br />
 
@@ -164,7 +163,7 @@ Spring Boot 기반 MSA에서 결제와 동시성 문제를 다룹니다.
 
 ### 📊 파이낸스닥 — 청년 대상 AI 재무 관리·금융 상품 추천 앱
 
-`개방형 클라우드 플랫폼(K-PaaS) 활용 공모전` &nbsp;|&nbsp; **React Native · Expo Router · TypeScript**
+`팀 프로젝트 · 프론트엔드 담당` &nbsp;|&nbsp; **React Native · Expo Router · TypeScript**
 
 청년의 재무 상태를 진단하고 맞춤 금융 상품과 금융 교육 콘텐츠를 추천하는 앱입니다.
 프론트엔드를 담당했으며, 백엔드는 K-PaaS 위에 올린 MSA(회원·리포트·추천·교육 서비스 + 상품 크롤러)로 구성됐습니다.
