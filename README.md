@@ -5,6 +5,7 @@
 ### 앱을 화면부터 서버까지 만들고, 스토어에 올려 운영합니다
 
 React Native로 만든 앱을 실제 스토어에서 서비스하고 있고,<br />
+Next.js로 만든 구독·결제 웹을 운영하며,<br />
 Spring Boot 기반 MSA에서 결제와 동시성 문제를 다룹니다.
 
 <br />
@@ -21,6 +22,8 @@ Spring Boot 기반 MSA에서 결제와 동시성 문제를 다룹니다.
 ![React Native](https://img.shields.io/badge/React_Native-61DAFB?style=flat-square&logo=react&logoColor=black)
 ![Expo](https://img.shields.io/badge/Expo-000020?style=flat-square&logo=expo&logoColor=white)
 ![Zustand](https://img.shields.io/badge/Zustand-433E38?style=flat-square&logo=react&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
+![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=flat-square&logo=nestjs&logoColor=white)
 ![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white)
 
 ![AWS](https://img.shields.io/badge/AWS_EC2-FF9900?style=flat-square&logo=amazonaws&logoColor=white)
@@ -44,24 +47,42 @@ Spring Boot 기반 MSA에서 결제와 동시성 문제를 다룹니다.
 
 ### 🌳 영어의 숲 — AI 영어 일기 학습 앱
 
-`iOS · Android 출시 운영 중 · 입사 후 App Store 25개+ 버전` &nbsp;|&nbsp; **React Native · TypeScript · NestJS · MySQL**
+`iOS · Android 출시 운영 중 · 입사 후 App Store 25개+ 버전` &nbsp;|&nbsp; **React Native · Next.js · TypeScript · NestJS · MySQL**
 
 영어 일기를 쓰면 AI가 꼬리질문을 던지고, 거기서 뽑은 단어를 복습하게 하는 학습 앱입니다.
-2025년 12월 클라이언트 개발자로 합류해 앱을 맡았고, 2026년 8월부터는 NestJS 백엔드도 함께 개발합니다.
+2025년 12월 클라이언트 개발자로 합류해 앱을 맡았고, 2026년 8월부터는 NestJS 백엔드를, 10월부터는 구독·결제 웹(Next.js)을 함께 개발합니다.
 
-- **앱 · 서버 양쪽 구현** — 롤플레이 · 복습 · 위젯 같은 기능을 앱과 서버에서 함께 구현 (앱 레포 PR 89% · 396/445, 2026.08 이후 BE 머지 PR 140건)
+- **앱 · 서버 양쪽 구현** — 롤플레이 · 복습 · 위젯 같은 기능을 앱과 서버에서 함께 구현 (앱 레포 PR 91% · 451/495, 2026.08 이후 BE 머지 PR 172건)
 - **구독 결제 · 페이월** — RevenueCat 기반 인앱 구독, 플랜 개편과 마일스톤 오퍼 설계, 배너 노출 실험
 - **그로스 계측** — Mixpanel · Firebase Analytics · AppsFlyer · Microsoft Clarity로 퍼널 이벤트를 설계하고, Sentry로 릴리스별 오류를 추적
 - **출시 운영** — iOS 심사 반려 대응(권한 문구 정비), 격주 배포 사이클, QA 회차 반영
 - **핵심 기능** — STT 기반 말하기 학습, 카카오 로그인, 공유 일기와 SNS 공유 카드
+- **구독·결제 웹** — Next.js · React로 소셜 로그인, Stripe Checkout 결제, 마이페이지, 해지 화면을 만들어 [languageforest.in](https://languageforest.in)에서 운영 (웹 레포 머지 PR 31건 중 30건)
 
 > 비공개 저장소라 코드는 공개되어 있지 않습니다. 상세 구현은 요청 시 설명드릴 수 있습니다.
 
 <br />
 
+### 📈 실시간 인프라 모니터 데모 — WebSocket으로 받은 서버 지표를 그리는 화면
+
+`연습용 · 2026.11 · 하루 동안 제작` &nbsp;|&nbsp; **Vue 3 · Vue Router · WebSocket · Web Worker · Highcharts · Vitest**
+
+Vue, WebSocket, Web Worker를 실무에서 써 본 적이 없어서 만들어 본 화면입니다. 실무 프로젝트가 아니고, 코드는 AI 코딩 도구와 같이 썼습니다.
+서버 값은 Node.js 스크립트가 만든 가짜 데이터이고, 한 대만 실행한 컴퓨터의 실제 CPU · 메모리 사용률입니다.
+
+- **화면 4개** — 요약, 호스트 목록, 호스트 상세, 이벤트
+- **묶어서 그리기** — 0.1초마다 오는 값을 쌓아 두고 0.25초마다 한 번만 화면에 반영
+- **보이는 줄만 그리는 목록** — 호스트가 몇 대든 화면에 보이는 줄만 렌더링
+- **차트 다운샘플링** — 1,200개를 400개 이하로 줄이되, 튄 값이 사라지지 않게 구간별 최솟값과 최댓값을 남김
+- **재 본 것** — 호스트 20,000대 조건에서 메인 스레드와 Worker의 처리 시간을 비교. 이 규모에서는 Worker보다 묶어서 그리기의 효과가 더 컸음
+
+🔗 [calla1102/realtime-monitor-demo](https://github.com/calla1102/realtime-monitor-demo)
+
+<br />
+
 ### ⌨️ 도각도각 — 기계식 키보드 소리가 나는 iPhone 키보드
 
-`App Store 출시 운영 중 · 1인 개발` &nbsp;|&nbsp; **Swift · UIKit · SwiftUI · SwiftPM · Kotlin**
+`App Store · Google Play 출시 운영 중 · 1인 개발` &nbsp;|&nbsp; **Swift · UIKit · SwiftUI · SwiftPM · Kotlin**
 
 타건음을 골라 두면 어느 앱에서 타이핑해도 그 소리가 나는 키보드입니다.
 **기획 · 디자인 · 개발 · 마케팅을 혼자** 했습니다.
@@ -69,7 +90,7 @@ Spring Boot 기반 MSA에서 결제와 동시성 문제를 다룹니다.
 - **5일 만에 출시** — 키보드 익스텐션으로 자판 전체를 직접 만들고, 한글 두벌식 오토마타를 SwiftPM 패키지로 구현
 - **출시 2주 만에 다운로드 1,000건** — 15초 광고 릴스와 피드를 직접 만들어 인스타그램(@ddogak_dogak) 운영
 - **피드백 반영** — DM · 댓글 · 앱 안 피드백 요청(소리 크기 · 키보드 높이 · 영문 자동 대문자)을 담아 출시 6일 만에 1.1.0, App Store 평점 4.4
-- **Android 베타** — 인스타 구글 폼으로 22명 신청 · 12명 설치, 제보를 받아 수정
+- **Android 출시** — 인스타 구글 폼으로 베타 테스터를 모아(22명 신청 · 12명 설치) 제보를 반영한 뒤 Google Play에 정식 출시
 
 🔗 [App Store](https://apps.apple.com/kr/app/id6819567600)
 
@@ -87,6 +108,7 @@ Spring Boot 기반 MSA에서 결제와 동시성 문제를 다룹니다.
 - **PG 예외 분류** — Toss Payments 취소 실패를 원본 에러 코드로 분류해, 일시적 거절은 재시도로 흡수하고 영구 실패만 알림
 - **쿼리 최적화** — 결제 내역 조회의 전수 스캔을 `(user_id, status)` 복합 인덱스로 제거
 - **동시성 방어** — `@DynamicUpdate`로 공연 엔티티의 stale 덮어쓰기 차단
+- **대시보드 집계 API** — 관리자 대시보드와 공연 목록이 같은 매출을 내도록 집계 API를 추가 ([#589](https://github.com/TicketRush/TicketRush-backend/pull/589))
 
 🔗 [TicketRush/TicketRush-backend](https://github.com/TicketRush/TicketRush-backend)
 
@@ -94,7 +116,7 @@ Spring Boot 기반 MSA에서 결제와 동시성 문제를 다룹니다.
 
 ### 📸 offmode — 오프라인 미션 습관 형성 앱
 
-`개인 프로젝트 · App Store 출시 이력 (현재 미게시)` &nbsp;|&nbsp; **React Native · Expo · Spring Boot · MySQL · AWS**
+`개인 프로젝트 · 운영 후 종료` &nbsp;|&nbsp; **React Native · Expo · Spring Boot · MySQL · AWS**
 
 매일 하나의 오프라인 미션을 사진으로 인증하는 소셜 챌린지 앱입니다.
 **앱 · 서버 · 인프라 · 디자인을 직접** 담당했습니다.
@@ -112,10 +134,10 @@ Spring Boot 기반 MSA에서 결제와 동시성 문제를 다룹니다.
 
 <div align="center">
 
-![Merged PRs](https://img.shields.io/badge/Merged_PRs-500+-1a936f?style=for-the-badge&logo=github&logoColor=white&labelColor=24292f)
+![Merged PRs](https://img.shields.io/badge/Merged_PRs-600+-1a936f?style=for-the-badge&logo=github&logoColor=white&labelColor=24292f)
 ![Contributions](https://img.shields.io/badge/Contributions-1,000+-1a936f?style=for-the-badge&logo=git&logoColor=white&labelColor=24292f)
 
-2026년에만 **머지 PR 500건 이상**(영어의 숲 앱 367 · 서버 141)을 남겼고, TicketRush에서는 팀원 PR 34건을 리뷰했습니다.<br />
+2026년에만 **머지 PR 600건 이상**(영어의 숲 앱 437 · 서버 172 · 웹 29)을 남겼고, TicketRush에서는 팀원 PR 34건을 리뷰했습니다.<br />
 회사에서는 사람 리뷰어가 없어, 직접 만든 AI 리뷰 에이전트와 CI 게이트로 코드 리뷰를 대신했습니다.
 
 <br />
@@ -130,6 +152,16 @@ Spring Boot 기반 MSA에서 결제와 동시성 문제를 다룹니다.
 ---
 
 ## 이전 프로젝트
+
+### 🙃 uncomfortable-ui — 일부러 불편하게 만든 UI 모음
+
+`개인 프로젝트 · 2026.04 ~ 09` &nbsp;|&nbsp; **React · TypeScript**
+
+쓰기 불편한 UI 20가지를 하나씩 직접 눌러 볼 수 있게 모은 웹입니다.
+
+🔗 [uncomfortable-ui.netlify.app](https://uncomfortable-ui.netlify.app) · [calla1102/uncomfortable-ui](https://github.com/calla1102/uncomfortable-ui)
+
+<br />
 
 ### 💸 0끌 — 커뮤니티 기반 게이미피케이션 지출 관리 앱
 
@@ -157,7 +189,7 @@ Spring Boot 기반 MSA에서 결제와 동시성 문제를 다룹니다.
 - 백엔드 4명이 내려주는 API를 혼자 받아내야 해서, **Swagger·Notion 명세를 대조해 불일치를 찾아내고 백엔드와 직접 조율**
 - 응답이 불안정한 호출 구간은 헬퍼 함수로 모듈화해 오류 처리를 한곳으로 모음
 
-🔗 [숲결 Frontend](https://github.com/calla1102/Frontend)
+🔗 [숲결 Frontend](https://github.com/calla1102/Soopgyeol)
 
 <br />
 
