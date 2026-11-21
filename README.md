@@ -52,7 +52,7 @@ Spring Boot 기반 MSA에서 결제와 동시성 문제를 다룹니다.
 영어 일기를 쓰면 AI가 꼬리질문을 던지고, 거기서 뽑은 단어를 복습하게 하는 학습 앱입니다.
 2025년 12월 클라이언트 개발자로 합류해 앱을 맡았고, 2026년 8월부터는 NestJS 백엔드를, 10월부터는 구독·결제 웹(Next.js)을 함께 개발합니다.
 
-- **앱 · 서버 양쪽 구현** — 롤플레이 · 복습 · 위젯 같은 기능을 앱과 서버에서 함께 구현 (앱 레포 PR 91% · 451/495, 2026.08 이후 BE 머지 PR 172건)
+- **앱 · 서버 양쪽 구현** — 롤플레이 · 복습 · 위젯 같은 기능을 앱과 서버에서 함께 구현 (앱 레포 PR 92% · 487/531, 2026.08 이후 BE 머지 PR 182건)
 - **구독 결제 · 페이월** — RevenueCat 기반 인앱 구독, 플랜 개편과 마일스톤 오퍼 설계, 배너 노출 실험
 - **그로스 계측** — Mixpanel · Firebase Analytics · AppsFlyer · Microsoft Clarity로 퍼널 이벤트를 설계하고, Sentry로 릴리스별 오류를 추적
 - **출시 운영** — iOS 심사 반려 대응(권한 문구 정비), 격주 배포 사이클, QA 회차 반영
@@ -137,7 +137,7 @@ Vue, WebSocket, Web Worker를 실무에서 써 본 적이 없어서 만들어 �
 ![Merged PRs](https://img.shields.io/badge/Merged_PRs-600+-1a936f?style=for-the-badge&logo=github&logoColor=white&labelColor=24292f)
 ![Contributions](https://img.shields.io/badge/Contributions-1,000+-1a936f?style=for-the-badge&logo=git&logoColor=white&labelColor=24292f)
 
-2026년에만 **머지 PR 600건 이상**(영어의 숲 앱 437 · 서버 172 · 웹 29)을 남겼고, TicketRush에서는 팀원 PR 34건을 리뷰했습니다.<br />
+2026년에만 **머지 PR 600건 이상**(영어의 숲 앱 473 · 서버 182 · 웹 30)을 남겼고, TicketRush에서는 팀원 PR 34건을 리뷰했습니다.<br />
 회사에서는 사람 리뷰어가 없어, 직접 만든 AI 리뷰 에이전트와 CI 게이트로 코드 리뷰를 대신했습니다.
 
 <br />
